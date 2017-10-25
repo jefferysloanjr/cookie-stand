@@ -3,16 +3,48 @@
 <html>
   <head>
     <title>Salmon Cookie Sales</title>
+    <link rel "stylesheet" href="reset.css">
+    <link rel "stylesheet" href="style.css">
+
   </head>
   <body>
     <!-- content goes here -->
-    <table>
-      <thead id="tablehead">
-      </thead>
-      <tbody id="store">
-        <!-- table content dynamically generated in JS -->
-      </tbody>
-    </table>
-    <script src="app.js"></script>
+    <form id="sample_form">
+      <fieldset>
+        <lable for="storeName">Store Name:</label>
+        <input type="text" name="storeName" placeholder="enter your store name" required>
+      </fieldset>
+
+      <fieldset>
+        <label for="minCust">Minimum Customers Per Hour</label>
+        <input type="text" name="minCust" placeholder="enter minimum custers per hour"required>
+      </fieldset>
+
+      <fieldset>
+        <label for="maxCust">Maximum Customers Per Hour<label>
+        <input type="text" name="maxCust" placeholder="enter maximum custermers per hour" required>
+      </fieldset>
+
+      <fieldset>
+        <label for="aveCookie">Average Cookies Sold Per Hour</label>
+        <input type="text" name="aveCust" placeholder="enter average cookies per hour" required>
+      </fieldset>
+
+      <button id="submit_btn" type="calculate">Calculate</button>
+
+    <section id="storeName">
+      <table>
+        <thead>
+          <!-- table content dynamically generated in JS -->
+          <th>Store Name</th>
+          <th>Max Customers</th>
+          <th>Minimum Customers</th>
+          <th>Average Cookies</th>
+        <thead>
+          <!-- store data goes here -->
+        </tbody id="store_table">
+      </table>
+    </section>
+  <script src="app.js"></script>
   </body>
 </html>

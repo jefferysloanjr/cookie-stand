@@ -1,87 +1,128 @@
 'use strict';
 
-var war = [];
-var store = [];
-var time = [];
+var form = document.getElementById('sample_for');
+var table = document.getElementById('store_table');
+var data = [];
 
-function Store(storeName, minCustOne, maxCustOne, aveCookieOne) {
+function Store(storeName, minCust, maxCust, aveCookie) {
   this.storeName = storeName;
-  this.minCustOne = minCustOne;
+  this.minCust = minCust;
   this.maxCustOne = maxCustOne;
-  this.aveCookieOne = aveCookieOne;
-  this.totalCookies = 0;
-  this.time = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
-}
-console.log(time);
-
-var firstAndPike = new Store('1st & Pike', 23, 65, 6.3);
-var seatacAirport = new Store('Seatac Airport', 3, 24, 1.2);
-var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
-var capitalHill = new Store('Capitol Hill', 20, 38, 2.8);
-var alki = new Store('Alki', 2, 16, 4.6);
-
-store.push(firstAndPike);
-store.push(seatacAirport);
-store.push(seattleCenter);
-store.push(capitalHill);
-store.push(alki);
-
-
-var tableHead = document.getElementById('tablehead');
-var data = document.createElement('tr');
-var tr = '';
-for (var i = 0; i < alki.time.length; i++) {
-  tr = tr + '<th>' + alki.time[i] + '</th>';
+  this.aveCookie = aveCookie;
 }
 
-data.innerHTML = tr;
-tableHead.appendChild(data);
+function formData(event) {
+  event.preventDefault();
 
-for (var s = 0; s < store.length; s++) {
-  war.push(
-    '<td>' + store[s].storeName + '</td>' +
-    '<td>' + store[s].storeName + '</td>' +
-    '<td>' + store[s].storeName + '</td>' +
-    '<td>' + store[s].storeName + '</td>'
-  );
+  var storeName = event.target.storeName.value;
+  var minCust = event.target.minCust.value;
+  var maxCust = event.target.maxCust.value;
+  var aveCookie = event.target.aveCookie.value;
+
+  data.push(new Store(storeName, minCust, maxCust, aveCookie));
+  createTable();
+  // form.reset();
 }
 
+function createTable() {
+  var row;
+  for (var i = 0; i < data.length; i++) {
+    row = document.createElement('tr');
+    row.innerHTML = '<td>' + data[i].storeName + '</td>' + '<td>' + data[i].minCust + '</td>' + '<td>' + data[i].maxCust + '</td>' + '<td>' + data[i].aveCookie + '</td>';
+  }
+
+  table.appendChild(row);
+}
+
+form.addEventListener('calculate', formData);
+// form.addEventHandler('calculate', formData);
+console.log(form.addEventListener, formData);
+
+// day 2 code start!!!!!!!!!!!!!!!!!!!
+// var war = [];
+// var store = [];
+// var time = [];
+//
+// function Store(storeName, minCustOne, maxCustOne, aveCookieOne) {
+//   this.storeName = storeName;
+//   this.minCustOne = minCustOne;
+//   this.maxCustOne = maxCustOne;
+//   this.aveCookieOne = aveCookieOne;
+//   this.totalCookies = 0;
+//   this.time = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+// }
+// console.log(store);
+//
+// var firstAndPike = new Store('1st & Pike', 23, 65, 6.3);
+// var seatacAirport = new Store('Seatac Airport', 3, 24, 1.2);
+// var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
+// var capitalHill = new Store('Capitol Hill', 20, 38, 2.8);
+// var alki = new Store('Alki', 2, 16, 4.6);
+//
+// store.push(firstAndPike);
+// store.push(seatacAirport);
+// store.push(seattleCenter);
+// store.push(capitalHill);
+// store.push(alki);
+//
+//
+// var tableHead = document.getElementById('tablehead');
+// var data = document.createElement('tr');
+// var tr = '';
+// for (var i = 0; i < alki.time.length; i++) {
+//   tr = tr + '<th>' + alki.time[i] + '</th>';
+// }
+//
+// data.innerHTML = tr;
+// tableHead.appendChild(data);
+//
+// for (var s = 0; s < store.length; s++) {
+//   war.push(
+//     '<td>' + store[s].storeName + '</td>' +
+//     '<td>' + store[s].storeName + '</td>' +
+//     '<td>' + store[s].storeName + '</td>' +
+//     '<td>' + store[s].storeName + '</td>'
+//   );
+// }
+//
 // var table = document.getElementById('store');
-// // var warTwo = document.createElement('tr');
-// // var th = '';
+// var warTwo = document.createElement('tr');
+// var th = '';
 // for (var w = 6; w < store.storeName; w++) {
 //   tr = tr + '<th>' + store.storeName[w] + '</th>';
 //   war.push(
-//   //   '<th>' + store[w].storeName + '</th>' +
-//   //   '<th>' + store[w].minCustOne + '</th>' +
-//   //   '<th>' + store[w].maxCustOne + '</th>' +
-//   //   '<th>' + store[w].aveCookieOne + '</th>' +
-//   //   '<th>' + store[w].totalCookies + '</th>'
+//   '<th>' + store[w].storeName + '</th>' +
+//   '<th>' + store[w].minCustOne + '</th>' +
+//   '<th>' + store[w].maxCustOne + '</th>' +
+//   '<th>' + store[w].aveCookieOne + '</th>' +
+//   '<th>' + store[w].totalCookies + '</th>'
 //   );
 // }
 
-war.innerHTML = tr;
-tr.appendChild(data);
+// war.innerHTML = tr;
+// tr.appendChild(data);
 
-console.log(table);
+// console.log(table);
 
-var newRow;
+// var newRow;
 
-for (var j = 0; j < war.length; j++) {
-  newRow = document.createElement('tr');
-  newRow.innerHTML = data[j];
-  table.appendChild(newRow);
-}
-console.log(newRow);
+// for (var j = 0; j < war.length; j++) {
+//   newRow = document.createElement('tr');
+//   newRow.innerHTML = data[j];
+//   table.appendChild(newRow);
+// }
+// console.log(newRow);
 
-Store.prototype.aveCustOne = function() {
-  var min = Math.ceil(this.minCustOne);
-  var max = Math.floor(this.maxCustOne);
-  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-};
+// Store.prototype.aveCustOne = function() {
+//   var min = Math.ceil(this.minCustOne);
+//   var max = Math.floor(this.maxCustOne);
+//   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+// };
 
-console.log(store);
+// console.log(store);
 
+
+// day 2 code end!!!!!!!!!!!!!!!!!!!!
 
 
 
