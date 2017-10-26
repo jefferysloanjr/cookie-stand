@@ -2,4 +2,9 @@
 body img {
   margin-left: 100px;
 }
-  
+
+form {
+  background: black;
+  padding: 15px;
+
+}
