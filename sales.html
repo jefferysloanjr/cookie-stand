@@ -5,14 +5,42 @@
     <title>Salmon Cookie Sales</title>
     <link rel "stylesheet" href="reset.css">
     <link rel "stylesheet" href="style.css">
-
   </head>
   <body>
     <!-- content goes here -->
     <form id="sample_form">
       <fieldset>
-        <lable for="storeName">Store Name:</label>
-        <input type="text" name="storeName" placeholder="enter your store name" required>
+        <select>
+          <label for="store">Stores</label>
+          <option value="store">First and Pike</option>
+          <option value="store">Seatac Airport</option>
+          <option value="store">Seattle Center</option>
+          <option value="store">CapitolHill</option>
+          <option value="store">Alki</option>
+
+          <!-- <input type="text" name="storeName" placeholder="enter your store name" required> -->
+        </select>
+      </fieldset>
+
+      <fieldset>
+          <select>
+            <label for="hours">Hours</label>
+            <option value="hours">6:00 am</option>
+            <option value="hours">7:00 am</option>
+            <option value="hours">8:00 am</option>
+            <option value="hours">9:00 am</option>
+            <option value="hours">10:00 am</option>
+            <option value="hours">11:00 am</option>
+            <option value="hours">12:00 pm</option>
+            <option value="hours">1:00 pm</option>
+            <option value="hours">2:00 pm</option>
+            <option value="hours">3:00 pm</option>
+            <option value="hours">4:00 pm</option>
+            <option value="hours">5:00 pm</option>
+            <option value="hours">6:00 pm</option>
+            <option value="hours">7:00 pm</option>
+            <option value="hours">8:00 pm</option>
+          </select>
       </fieldset>
 
       <fieldset>
@@ -40,6 +68,7 @@
           <th>Max Customers</th>
           <th>Minimum Customers</th>
           <th>Average Cookies</th>
+          <th>Total Cookies</th>
         <thead>
           <!-- store data goes here -->
         </tbody id="store_table">
