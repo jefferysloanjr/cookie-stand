@@ -25,6 +25,45 @@ function formData(event) {
   form.reset();
 }
 
+<<<<<<< HEAD
+data.innerHTML = tr;
+tableHead.appendChild(data);
+
+for (var s = 0; s < store.length; s++) {
+  war.push(
+    '<td>' + store[s].storeName + '</td>' +
+    '<td>' + store[s].storeName + '</td>' +
+    '<td>' + store[s].storeName + '</td>' +
+    '<td>' + store[s].storeName + '</td>'
+  );
+}
+
+var table = document.getElementById('store');
+// var warTwo = document.createElement('tr');
+// var th = '';
+for (var w = 6; w < store.storeName; w++) {
+  tr = tr + '<th>' + store.storeName[w] + '</th>';
+  war.push(
+    '<th>' + store[w].storeName + '</th>' +
+    '<th>' + store[w].minCustOne + '</th>' +
+    '<th>' + store[w].maxCustOne + '</th>' +
+    '<th>' + store[w].aveCookieOne + '</th>' +
+    '<th>' + store[w].totalCookies + '</th>'
+  );
+}
+
+war.innerHTML = tr;
+tr.appendChild(data);
+
+console.log(table);
+
+var newRow;
+
+for (var j = 0; j < war.length; j++) {
+  newRow = document.createElement('tr');
+  newRow.innerHTML = data[j];
+  table.appendChild(newRow);
+=======
 function createTable() {
   var row;
   for (var i = 0; i < data.length; i++) {
@@ -37,6 +76,7 @@ function createTable() {
   }
 
   table.appendChild(row);
+>>>>>>> 444470e0d65de8ab3da5cd128e20b5dccad0638c
 }
 
 aveCust = function() {
@@ -45,6 +85,10 @@ aveCust = function() {
   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
 };
 
+<<<<<<< HEAD
+console.log(store);
+=======
 form.addEventListener('calculate', formData);
 
 console.log('FORM', form);
+>>>>>>> 444470e0d65de8ab3da5cd128e20b5dccad0638c

@@ -1,10 +1,92 @@
-
-body img {
-  margin-left: 100px;
+body {
+  background: salmon;
 }
+
+body section img {
+  margin-left : 400px;
+}
+
+h1 img {
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+
+h1 p {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+h2 img {
+  margin-left: 200px;
+  margin-bottom: 50px;
+}
+
+h2 p {
+  float: right;
+  /*padding: 50px;*/
+  margin-left: 550px;
+  margin-top: 50px;
+  margin-right: 600px;
+}
+
+h3 img {
+  margin-left: 200px;
+}
+
+h3 p {
+  float: right;
+  /*padding: 50px;*/
+  margin-left: 550px;
+  margin-top: 50px;
+  margin-right: 600px;
+}
+
+h4 img {
+  margin-left: 200px;
+}
+
+h4 p {
+  float: right;
+  /*padding: 50px;*/
+  margin-left: 550px;
+  margin-top: 50px;
+  margin-right: 600px;
+}
+
+h5 img {
+  margin-left: 200px;
+}
+
+h5 p {
+  float: right;
+  /*padding: 50px;*/
+  margin-left: 550px;
+  margin-top: 50px;
+  margin-right: 600px;
+}
+
+h6 img {
+  margin-left: 200px;
+}
+
+h6 p {
+  float: right;
+  /*padding: 50px;*/
+  margin-left: 550px;
+  margin-top: 50px;
+  margin-right: 600px;
+}
+
+footer {
+  color: blue;
+  font-size: 25px;
+  margin-left: 450px;
+}
+<<<<<<< HEAD
+=======
 
 form {
   background: black;
   padding: 15px;
 
 }
+>>>>>>> 444470e0d65de8ab3da5cd128e20b5dccad0638c
