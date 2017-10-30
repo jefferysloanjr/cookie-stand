@@ -25,7 +25,6 @@ function formData(event) {
   form.reset();
 }
 
-<<<<<<< HEAD
 data.innerHTML = tr;
 tableHead.appendChild(data);
 
@@ -63,7 +62,7 @@ for (var j = 0; j < war.length; j++) {
   newRow = document.createElement('tr');
   newRow.innerHTML = data[j];
   table.appendChild(newRow);
-=======
+
 function createTable() {
   var row;
   for (var i = 0; i < data.length; i++) {
@@ -75,20 +74,13 @@ function createTable() {
     '<td>' + data[i].totalCookies + '</td>';
   }
 
-  table.appendChild(row);
->>>>>>> 444470e0d65de8ab3da5cd128e20b5dccad0638c
-}
+table.appendChild(row);
 
 aveCust = function() {
   var min = Math.ceil(this.minCust);
   var max = Math.floor(this.maxCust);
   return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
-};
-
-<<<<<<< HEAD
+}
 console.log(store);
-=======
-form.addEventListener('calculate', formData);
 
-console.log('FORM', form);
->>>>>>> 444470e0d65de8ab3da5cd128e20b5dccad0638c
+form.addEventListener('calculate', formData);
